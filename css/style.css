@@ -5,6 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
 /* From App */
 #app {
   font-family: Anton;
@@ -29,6 +35,32 @@ nav a.router-link-exact-active {
 .navbar {
   background-color: rgb(238, 240, 255);
 }
+/* Footer */
+footer{
+    background-color: rgb(238, 240, 255);
+}
+.icon {
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .icons {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  icon:hover {
+    background-color: lightblue; /* Change the background color to lightblue on hover */
+  }
+
+  .icon svg {
+    fill: black; /* Set default fill color for SVG icons */
+  }
+
+  .icon:hover svg {
+    fill: blue; /* Change the fill color to blue on hover */
+  }
 
 /* Logo */
 img[alt='logo'] {
@@ -57,7 +89,6 @@ img[alt='logo'] {
   font-style: italic;
   font-weight: bold;
   text-align: center;
-  color: antiquewhite;
 }
 
 @keyframes text {
@@ -112,22 +143,34 @@ img {
 @media screen and (width < 700px) {
   .about-content {
     font-style: italic;
-    color: antiquewhite;
+    /* color: antiquewhite; */
     overflow-y: scroll;
     height: 20rem;
     scroll-snap-type: y mandatory;
   }
 }
-.body-background {
-  backdrop-filter: blur(1rem);
-  border: 1px solid-transparent;
-  background-color: rgba(180, 170, 219, 0.5);
+.circular-image {
+    /* width: 200px;
+    height: 200px; */
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.circular-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.circular-image:hover img {
+    transform: scale(1.1);
 }
 /* Resume */
 .card {
     width: 300px;
     height: 400px;
-    background-color: rgba(71, 69, 71, 0.5);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -161,7 +204,6 @@ img {
     backface-visibility: hidden;
   }
   .card-front {
-    background-color: rgba(71, 69, 71, 0.5);
     color: #fff;
     display: flex;
     align-items: center;
@@ -171,7 +213,6 @@ img {
     transform: rotateY(0deg);
   }
   .card-back {
-    background-color: rgba(71, 69, 71, 0.5);
     color: #fff;
     display: flex;
     align-items: center;
@@ -187,10 +228,14 @@ img {
   }
   .card-text {
     margin: 2rem;
+  
   }
-  .text-sm {
-    font-size: 0.875rem;
-  }
+.small-font {
+    font-size: 0.75rem; /* Adjust the font size as needed */
+}
+
+
+
 
   /* Projects */
   .card-container-project {
@@ -238,27 +283,62 @@ img {
     }
   }
 /* References */
-.card-refer {
-    background-color: rgba(71, 69, 71, 0.5);
-  }
-  .card-title-refer{
-    font-style: italic;
-    color: antiquewhite;
-  }
-  .card-text-refer {
-    font-style: italic;
-    color: antiquewhite;
-  }
+    .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+    }
 
+    .testimonial {
+        display: none;
+        text-align: center;
+    }
 
+    img {
+        max-width: 100%;
+        height: auto;
+        /* border-radius: 50%; */
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+ 
+
+    
+    @media screen and (width < 700px) {
+        .testimonial-content {
+          font-style: italic;
+          overflow-y: scroll;
+          height: 10rem;
+          scroll-snap-type: y mandatory;
+        }
+      }
 /* Contact */
 
 .form-label {
     font-style: italic;
-    color: antiquewhite;
+    color: rgb(27, 41, 196);
   }
   
   .text {
     font-style: italic;
-    color: antiquewhite;
+    color: rgb(41, 26, 215);
   }
+
+
+
