@@ -5,3 +5,260 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* From App */
+#app {
+  font-family: Anton;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #11191e;
+}
+
+.navbar {
+  background-color: rgb(238, 240, 255);
+}
+
+/* Logo */
+img[alt='logo'] {
+  width: 5rem;
+  aspect-ratio: 1/1;
+}
+/* Landing page */
+
+#view {
+  animation-name: text;
+  animation-duration: 5s;
+  animation-iteration-count: calc(1);
+}
+
+#view1 {
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(44, 9, 237);
+  padding-bottom: 5px;
+}
+
+#view2 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color: antiquewhite;
+}
+
+@keyframes text {
+  from {
+    margin-top: 400px;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+.animate {
+  font-family: 'Anton';
+  background-image: linear-gradient(
+    -225deg,
+    #e8c5ec 0%,
+    #0a0592 29%,
+    #41b4e9 67%,
+    #e8c5ec 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+img {
+  width: 350px;
+  animation-name: text;
+  animation-duration: 4s;
+  animation-iteration-count: calc(1);
+}
+#one {
+  animation-timing-function: ease;
+  width: 250px;
+}
+/* About */
+@media screen and (width < 700px) {
+  .about-content {
+    font-style: italic;
+    color: antiquewhite;
+    overflow-y: scroll;
+    height: 20rem;
+    scroll-snap-type: y mandatory;
+  }
+}
+.body-background {
+  backdrop-filter: blur(1rem);
+  border: 1px solid-transparent;
+  background-color: rgba(180, 170, 219, 0.5);
+}
+/* Resume */
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(71, 69, 71, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .card-front {
+    background-color: rgba(71, 69, 71, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  .card-back {
+    background-color: rgba(71, 69, 71, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 576px) {
+    p.text-sm {
+      font-size: 14px;
+    }
+  }
+  .card-text {
+    margin: 2rem;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  /* Projects */
+  .card-container-project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card-project {
+    flex: 0 1 calc(30% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: rgba(71, 69, 71, 0.5);
+  }
+  
+  .card-img-top {
+    max-width: 100%;
+    min-height: auto;
+  }
+  .card-title-project {
+    font-style: italic;
+    color: antiquewhite;
+  }
+  .card-text-project {
+    font-style: italic;
+    color: antiquewhite;
+  }
+  .card-body {
+    text-align: center; /* Optional: Center the text within the card body */
+  }
+  
+  .btn {
+    margin-top: 10px; /* Optional: Adjust the spacing between the buttons and text */
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 1 calc(45% - 20px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      flex: 0 1 calc(100% - 20px);
+    }
+  }
+/* References */
+.card-refer {
+    background-color: rgba(71, 69, 71, 0.5);
+  }
+  .card-title-refer{
+    font-style: italic;
+    color: antiquewhite;
+  }
+  .card-text-refer {
+    font-style: italic;
+    color: antiquewhite;
+  }
+
+
+/* Contact */
+
+.form-label {
+    font-style: italic;
+    color: antiquewhite;
+  }
+  
+  .text {
+    font-style: italic;
+    color: antiquewhite;
+  }
