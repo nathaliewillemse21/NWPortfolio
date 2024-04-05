@@ -42,27 +42,37 @@
 <main class="container-fluid">
 
 
-    <div class="body-background">
-        
-        <div id="view">
-          <div id="view1"></div>
-          <div id="view2"></div>
-        </div>
-        <h1 class="display-2">
-          I am <span class="fw-bold"> Nathalie Willemse</span>, an aspiring
-          <span class="animate">Software Developer</span>
-        </h1>  
-
-        <div class="circular-image d-flex justify-content-center">
-            <img
-              src="https://i.ibb.co/tHvBJQ8/IMG-20231010-WA0046.jpg"
-            id="one"
-              loading="lazy"
-              alt="homepage"
-            />
+      <div class="container-fluid">
+        <div class="row">
+          <!-- First Column -->
+          <div class="col-md-6">
+            <div class="body-background">
+              <div id="view">
+                <div id="view1"></div>
+                <div id="view2"></div>
+              </div>
+              <h1 class="display-3 ">
+                I am <span class="animate">Nathalie Willemse</span>, an aspiring
+                <span class="animate">Software Developer</span>
+              </h1>
+            </div>
           </div>
+          
+          <!-- Second Column -->
+     
+          <div class="col-md-6">
+            <div class="circular-image d-flex justify-content-center">
+              <img
+                src="https://i.ibb.co/tHvBJQ8/IMG-20231010-WA0046.jpg"
+                id="one"
+                loading="lazy"
+                alt="homepage"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
+      
 
 
 
@@ -114,7 +124,7 @@ balls.forEach((el, i, ra) => {
     </script>
 </main>
 
-<footer class="container-fluid fixed"> 
+<footer class="container-fluid fixed-bottom"> 
     <div class="row">
     <p class="lead fw-bold d-flex justify-content-center ">Nathalie Willemse &copy;<span id="footer" ></span></p>
 </div> 
