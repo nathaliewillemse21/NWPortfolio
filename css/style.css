@@ -35,6 +35,11 @@ nav a.router-link-exact-active {
 .navbar {
   background-color: rgb(238, 240, 255);
 }
+.nav-item:hover .nav-link {
+    color: #0f29ef; /* Change text color to blue */
+    text-shadow: 0 0 10px #3c50c1;
+
+} /* Add text shadow to create the glowing effect */
 /* Footer */
 footer{
     background-color: rgb(238, 240, 255);
