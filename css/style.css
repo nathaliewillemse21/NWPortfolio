@@ -316,6 +316,8 @@ img {
     .testimonial {
         display: none;
         text-align: center;
+        font-style: italic;
+        margin-bottom: 3rem;
     }
 
     img {
@@ -346,7 +348,6 @@ img {
     
     @media screen and (width < 700px) {
         .testimonial-content {
-          font-style: anton;
           overflow-y: scroll;
           height: 10rem;
           scroll-snap-type: y mandatory;
