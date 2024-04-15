@@ -231,7 +231,7 @@ img {
     position: relative;
     transition: all 0.3s ease;
   }
-.card-resume {
+/* .card-resume {
     width: 5rem;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgb(51, 5, 188);
@@ -243,10 +243,10 @@ img {
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease;
-  }
+  } */
   .icon-size {
-    margin: 2rem;
-    width: 50px; /* Adjust the width as needed */
+    margin: 0.5rem;
+    width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
