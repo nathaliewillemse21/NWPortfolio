@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .ball {
     position: absolute;
     border-radius: 100%;
@@ -35,6 +40,7 @@ nav a.router-link-exact-active {
 } /* Add text shadow to create the glowing effect */
 /* Footer */
 footer{
+  /* margin-bottom: 0%; */
     background-color: rgb(238, 240, 255);
 }
 .icon {
@@ -43,6 +49,7 @@ footer{
     transition: background-color 0.3s ease;
   }
   .icons {
+    margin-top: 10rem;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -121,6 +128,7 @@ h1{
     }
 }
 
+
 .animate {
   font-family: 'Anton';
   background-image: linear-gradient(
@@ -170,6 +178,16 @@ img {
     scroll-snap-type: y mandatory;
   }
 }
+@media screen and (max-width: 700px) {
+  .bubble {
+    font-style: italic;
+    /* color: antiquewhite; */
+    overflow-y: scroll;
+    height: 10rem;
+    width: 15rem;
+    scroll-snap-type: y mandatory;
+  }
+}
 .circular-image {
     border-radius: 100%;
     overflow: hidden;
@@ -178,7 +196,7 @@ img {
 }
 
 .circular-image img {
-    width: 100%;
+    width: 300px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -202,9 +220,10 @@ img {
     /* width: 120px;
     padding: 10px; */
     font-weight: bold;
-   
+    font-family: Anton;
+   /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
   }
-  
+
   .event p {
     margin-left: 10px;
   }
@@ -232,6 +251,7 @@ img {
     transition: all 0.3s ease;
   }
 .card-resume {
+  margin: 0.5rem;
     width: 5rem;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgb(51, 5, 188);
@@ -299,10 +319,37 @@ img {
 .small-font {
     font-size: 0.75rem; /* Adjust the font size as needed */
 }
+.timeline{
+  display:flex;
+  justify-content: center;
+}
 
+/* Experience */
+.timeline {
+  position: relative;
+  padding-left: 20px; /* Adjust as needed */
+}
 
+.event {
+  position: relative;
+  padding-left: 10px; /* Adjust as needed */
+  padding-right: 10px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
 
+.event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Adjust as needed */
+  height: 100%;
+  border-left: 2px solid black; /* Adjust as needed */
+}
 
+.date {
+  font-weight: bold;
+  color: #555;
+}
   /* Projects */
   .card-container {
     display: flex;
@@ -410,25 +457,6 @@ img {
   }
 
 
-
-  /* .card {
-    width: 50px;
-    height: 50px; 
-    margin-bottom: 20px; 
-} */
-
-/* .card img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-
-@media (max-width: 576px) {
-    .card {
-        width: 100%;
-        height: auto;
-    }
-}
-} */
 .card img {
     width: 50px; /* Set width of the image */
     height: auto; /* Maintain aspect ratio */
@@ -443,4 +471,80 @@ img {
 
 .card img:hover {
     opacity: 1; /* Increase opacity on hover */
+}
+
+
+
+
+
+/* timeline */
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-date {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 10px;
+  background: #f2f2f6;
+  -webkit-box-shadow: 5px 5px 10px #5860f8, -5px -5px 10px #3f10f8;
+          box-shadow: 5px 5px 10px #2709e8, -5px -5px 10px #081fec;
+  border-radius: 5px;
+  /* color: rgb(17, 13, 13); */
+  padding: 0.5rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline-date {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #2821f2, #40cae9, #2a238a);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #2821f2, #40cae9, #2a238a);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
