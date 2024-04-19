@@ -480,6 +480,18 @@ img {
 /* timeline */
 .design-section {
   display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  /* Optional: Adjust other styles as needed */
+}
+
+.timeline-date {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of timeline items */
+  /* Optional: Adjust other styles as needed */
+}
+
+.design-section {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -548,3 +560,4 @@ img {
             transform: translateX(-50%);
   }
 }
+
