@@ -652,3 +652,19 @@ img {
     }
   }
 }
+
+/* experience and skills */
+.container-badges{
+  border-style: solid;
+  border-spacing: 2rem;
+  margin: 5px;
+  padding: 2rem;
+  
+}
+.card-resume {
+  display: block;
+}
+/* .icon-size {
+  max-width: 100%;
+  height: auto;
+} */
