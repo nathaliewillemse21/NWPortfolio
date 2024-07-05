@@ -45,13 +45,11 @@ nav a.router-link-exact-active {
 /* Add text shadow to create the glowing effect */
 /* Footer */
 footer {
-  /* margin-bottom: 0%; */
   background-color: rgb(238, 240, 255);
 }
 
 .icon {
-  /* margin: 10px; */
-  /* padding: 10px; */
+
   transition: background-color 0.3s ease;
 }
 
@@ -392,6 +390,17 @@ img {
   color: #555;
 }
 
+.header {
+  text-align: center; /* Centers the text */
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
 /* Projects */
 .card-container {
   display: flex;
@@ -531,8 +540,6 @@ img {
   opacity: 1;
   /* Increase opacity on hover */
 }
-
-
 
 
 
